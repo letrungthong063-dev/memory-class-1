@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trang Danh Sách Lớp</title>
+
+<link rel="icon" href="/asset/favicon.ico" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#516d85",
+                        "accent": "#FFEB70",
+                        "warm-red": "#E74C3C",
+                        "soft-green": "#C1E1C1",
+                        "background-light": "#F5F4F0",
+                        "background-dark": "#17191b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans", "sans-serif"],
+                        "body": ["Inter", "Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-19PSC0EMZP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-19PSC0EMZP');
+  </script>
+    
+    
+    
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-[#121516] min-h-screen flex flex-col overflow-x-hidden">
+<header class="w-full px-6 py-6 md:px-20 lg:px-40 flex justify-center bg-[#F5F4F0]">
+<div class="max-w-[1200px] w-full border-b border-[#d8dcdf] pb-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a class="bg-accent p-2 rounded-lg text-primary  transition-colors" href="#">
+<span class="material-symbols-outlined !text-[28px]">school</span>
+</a>
+<h1 class="text-primary text-xl font-bold tracking-tight">Danh sách lớp</h1>
+</div>
+<a class="hidden md:flex items-center gap-1 text-[#67747e] hover:text-primary font-medium text-sm transition-colors" href="/index.html">
+<span class="material-symbols-outlined !text-[18px]">home</span>
+                Trang chủ
+            </a>
+</div>
+</header>
+<main class="flex-grow w-full px-6 md:px-20 lg:px-40 flex flex-col items-center py-30 bg-[#F5F4F0]">
+    
+
+    <!------ nút quay lại  ------>
+    
+    
+<div class="max-w-[800px] w-full flex flex-col gap-10">
+<div class="flex justify-start">
+<a class="inline-flex items-center gap-2 text-primary hover:text-warm-red font-semibold text-sm transition-colors group" href="/index.html">
+<span class="material-symbols-outlined !text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Quay lại
+            </a>
+</div>
+    
+    
+    
+    
+    
+<section class="flex flex-col gap-4 text-center items-center max-w-2xl mx-auto pt-4">
+<div class="flex items-center justify-center gap-3 mb-1">
+<span class="material-symbols-outlined text-warm-red">groups</span>
+</div>
+<h2 class="text-[#121516] text-3xl md:text-5xl font-black leading-tight tracking-[-0.033em] relative inline-block">
+                    Danh Sách Lớp
+                    <span class="absolute -top-3 -right-5 text-accent">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"></path></svg>
+</span>
+</h2>
+<p class="text-[#516d85] text-lg font-medium leading-relaxed max-w-xl">
+                    Danh sách các thành viên của tập thể lớp. Nơi lưu giữ thông tin để chúng ta luôn tìm thấy nhau.
+                </p>
+</section>
+<section class="w-full bg-white rounded-xl shadow-sm border border-[#d8dcdf] overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-primary/5 border-b border-[#d8dcdf] text-[#516d85]">
+<th class="p-5 font-bold text-sm uppercase tracking-wider w-16 text-center">STT</th>
+<th class="p-5 font-bold text-sm uppercase tracking-wider">Tên học sinh</th>
+<th class="p-5 font-bold text-sm uppercase tracking-wider text-right pr-8">Thông Tin</th>
+</tr>
+</thead>
+<tbody id="student-list">
+<tr class="student-row group hover:bg-[#F5F4F0] transition-colors border-b border-[#f0f0f0] last:border-0">
+<td class="p-5 text-center font-medium text-[#67747e]">01</td>
+<td class="p-5 font-semibold text-[#121516] text-lg">Đặng Châu Anh</td>
+<td class="p-5 text-right">
+<a href="/class_list/students/dang_chau_anh.html" class="bg-primary hover:bg-warm-red text-white text-sm font-medium px-4 py-2 rounded transition-colors inline-flex items-center gap-1">
+                                Profile
+                                    </a>
+</td>
+</tr>
+<tr class="student-row group hover:bg-[#F5F4F0] transition-colors border-b border-[#f0f0f0] last:border-0">
+<td class="p-5 text-center font-medium text-[#67747e]">02</td>
+<td class="p-5 font-semibold text-[#121516] text-lg">Lê Trung Thông</td>
+<td class="p-5 text-right">
+<a href="/class_list/students/trung_thong-profile.html" class="bg-primary hover:bg-warm-red text-white text-sm font-medium px-4 py-2 rounded transition-colors inline-flex items-center gap-1">
+                                        Profile
+                                    </a>
+</td>
+</tr>
+<tr class="student-row group hover:bg-[#F5F4F0] transition-colors border-b border-[#f0f0f0] last:border-0">
+<td class="p-5 text-center font-medium text-[#67747e]">03</td>
+<td class="p-5 font-semibold text-[#121516] text-lg">Ngô Thị Phương Hảo</td>
+<td class="p-5 text-right">
+<a href="/class_list/students/phuong_hao-profile.html" class="bg-primary hover:bg-warm-red text-white text-sm font-medium px-4 py-2 rounded transition-colors inline-flex items-center gap-1">
+                                        Profile
+                                    </a>
+</td>
+</tr>
+<tr class="student-row group hover:bg-[#F5F4F0] transition-colors border-b border-[#f0f0f0] last:border-0">
+<td class="p-5 text-center font-medium text-[#67747e]">04</td>
+<td class="p-5 font-semibold text-[#121516] text-lg">Lê Trung Thân</td>
+<td class="p-5 text-right">
+<a href="/class_list/students/trung_than-profile.html" class="bg-primary hover:bg-warm-red text-white text-sm font-medium px-4 py-2 rounded transition-colors inline-flex items-center gap-1">
+                                        Profile
+                                    </a>
+</td>
+</tr>
+<tr class="student-row group hover:bg-[#F5F4F0] transition-colors border-b border-[#f0f0f0] last:border-0">
+<td class="p-5 text-center font-medium text-[#67747e]">05</td>
+<td class="p-5 font-semibold text-[#121516] text-lg">Hà Đức Tiến</td>
+<td class="p-5 text-right">
+<a href="/class_list/students/duc_tien-profile.html" class="bg-primary hover:bg-warm-red text-white text-sm font-medium px-4 py-2 rounded transition-colors inline-flex items-center gap-1">
+                                        Profile
+                                    </a>
+</td>
+</tr>
+<tr class="hidden-row hidden group hover:bg-[#F5F4F0] transition-colors border-b border-[#f0f0f0] last:border-0">
+<td class="p-5 text-center font-medium text-[#67747e]">06</td>
+<td class="p-5 font-semibold text-[#121516] text-lg">Trần Anh Thư</td>
+<td class="p-5 text-right">
+<a href="/class_list/students/anh_thu-profile.html" class="bg-primary hover:bg-warm-red text-white text-sm font-medium px-4 py-2 rounded transition-colors inline-flex items-center gap-1">
+                                        Profile
+                                    </a>
+</td>
+</tr>
+
+
+
+
+
+<!--- muốn xoá tên thì xoá thẻ tr---->
+
+
+
+</tbody>
+</table>
+</div>
+</section>
+<div class="flex justify-center w-full">
+<button class="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide transition-all duration-300 flex items-center gap-3 group shadow-sm hover:shadow-md" id="toggleBtn" onclick="toggleRows()">
+<span id="btnText">Xem thêm</span>
+<span class="material-symbols-outlined !text-[20px] group-hover:translate-y-1 transition-transform" id="btnIcon">expand_more</span>
+</button>
+</div>
+</div>
+</main>
+<div class=" mt-10">
+</div>
+<footer class="w-full py-1 flex justify-center border-t border-[#d8dcdf] mt-auto bg-[#F5F4F0]">
+    <p class="text-[#67747e] text-xs flex items-center gap-1">
+        © 2026 Memory | Yahub | <a href="mailto:letrungthong063@gmail.com?subject=Liên hệ&body=Xin chào yahub">
+            Liên hệ
+        </a>
+    </p>
+</footer>
+<script>
+        function toggleRows() {
+            const hiddenRows = document.querySelectorAll('.hidden-row');
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+            let isHidden = true;
+            hiddenRows.forEach(row => {
+                if (row.classList.contains('hidden')) {
+                    row.classList.remove('hidden');
+                    isHidden = false;
+                } else {
+                    row.classList.add('hidden');
+                    isHidden = true;
+                }
+            });
+            if (!isHidden) {
+                btnText.textContent = "Thu gọn";
+                btnIcon.textContent = "expand_less";
+                btnIcon.classList.remove('group-hover:translate-y-1');
+                btnIcon.classList.add('group-hover:-translate-y-1');
+            } else {
+                btnText.textContent = "Xem thêm";
+                btnIcon.textContent = "expand_more";
+                btnIcon.classList.remove('group-hover:-translate-y-1');
+                btnIcon.classList.add('group-hover:translate-y-1');
+            }
+        }
+    </script>
+
+</body></html>

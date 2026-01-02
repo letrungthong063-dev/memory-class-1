@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trang Profile</title>
+
+<link rel="icon" href="/asset/favicon.ico" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#516d85",
+                        "accent": "#FFEB70",
+                        "warm-red": "#E74C3C",
+                        "soft-green": "#C1E1C1",
+                        "background-light": "#F5F4F0",
+                        "background-dark": "#17191b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans", "sans-serif"],
+                        "body": ["Inter", "Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-19PSC0EMZP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-19PSC0EMZP');
+  </script>
+    
+    
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-[#121516] min-h-screen flex flex-col overflow-x-hidden">
+<header class="w-full px-6 py-6 md:px-20 lg:px-40 flex justify-center bg-[#F5F4F0]">
+<div class="max-w-[1200px] w-full border-b border-[#d8dcdf] pb-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a class="bg-accent p-2 rounded-lg text-primary transition-colors" href="#">
+<span class="material-symbols-outlined !text-[28px]">school</span>
+</a>
+<h1 class="text-primary text-xl font-bold tracking-tight">Profile</h1>
+</div>
+<a class="hidden md:flex items-center gap-1 text-[#67747e] hover:text-primary font-medium text-sm transition-colors" href="#">
+<span class="material-symbols-outlined !text-[18px]">home</span>
+            Trang chủ
+        </a>
+</div>
+</header>
+<main class="flex-grow w-full px-6 md:px-20 lg:px-40 flex flex-col items-center py-10 bg-[#F5F4F0]">
+<div class="max-w-[800px] w-full flex flex-col gap-8">
+<div class="flex justify-start">
+<a class="inline-flex items-center gap-2 text-primary hover:text-warm-red font-semibold text-sm transition-colors group" href="/class_list/class_list.html">
+<span class="material-symbols-outlined !text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Quay lại
+            </a>
+</div>
+<section class="w-full bg-white rounded-xl shadow-sm border border-[#d8dcdf] overflow-hidden p-8 md:p-12 relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-soft-green/30 to-transparent rounded-bl-full -mr-10 -mt-10 opacity-60"></div>
+<div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative z-10">
+<div class="flex-shrink-0">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-[6px] border-[#F5F4F0] shadow-md overflow-hidden bg-gray-100">
+  
+  <!-------- Ảnh avt -------->
+  
+<img alt="Avatar học sinh" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="/class_list/images_avt/dang_chau_anh.png"/>
+</div>
+</div>
+<div class="flex-grow text-center md:text-left w-full">
+<div class="border-b border-[#f0f0f0] pb-5 mb-6">
+<h2 class="text-[#121516] text-3xl md:text-4xl font-black tracking-tight">
+                            Đặng Châu Anh
+                        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-[#67747e] uppercase tracking-wider flex items-center justify-center md:justify-start gap-1">
+<span class="material-symbols-outlined !text-[16px] text-primary">calendar_month</span>
+                                Ngày sinh
+                            </span>
+<span class="text-lg font-medium text-[#121516]">24 tháng 10, 2009</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-[#67747e] uppercase tracking-wider flex items-center justify-center md:justify-start gap-1">
+<span class="material-symbols-outlined !text-[16px] text-primary">wc</span>
+                                Giới tính
+                            </span>
+<span class="text-lg font-medium text-[#121516]">Nữ</span>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<span class="text-xs font-bold text-[#67747e] uppercase tracking-wider flex items-center justify-center md:justify-start gap-1">
+<span class="material-symbols-outlined !text-[16px] text-primary">badge</span>
+                                Chức vụ trong lớp
+                            </span>
+<div class="mt-1 flex justify-center md:justify-start">
+<span class="inline-flex items-center gap-2 bg-primary/5 border border-primary/20 text-primary px-4 py-2 rounded-lg font-bold">
+<span class="material-symbols-outlined !text-[20px] text-warm-red">star</span>
+                                    Thành viên
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full bg-white rounded-xl shadow-sm border border-[#d8dcdf] overflow-hidden p-8 md:p-12 relative">
+<div class="border-b border-[#f0f0f0] pb-5 mb-8 flex items-center gap-3">
+<div class="bg-accent/30 p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined !text-[24px]">photo_library</span>
+</div>
+<h3 class="text-[#121516] text-2xl font-bold tracking-tight">Thư viện ảnh</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  
+  
+  <!---- thư viện ảnh------>
+  
+
+<div class="aspect-square rounded-lg overflow-hidden bg-gray-100 relative group cursor-pointer border border-gray-100">
+<img alt="Gallery image 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkfNeN0fBxhyISDizSehb3acWyhlBUC0CmgLLoa7qzonaH9sLE4dIhIwN8xvfVZgq0TfbDExK_qfSk-LLVrtEaxxnViPNmj7N3-iusvTwBAUkaxgutjsni8KiuodMDuyZ3VW2dSx1EWDx4Oef4tMG2ZGcSvQyDjSr8zbz8gdTOlD3ITXY6h9X9GFsToqJa7_WjesZffmLJmmNhePjkudPDk8N1sD4mFrVLImAEBcItWGWREXZsnfsTgMtTVA-Wbc85W-12Iu_U6yE"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+</div>
+
+<div class="aspect-square rounded-lg overflow-hidden bg-[#F5F4F0] relative group cursor-pointer border border-dashed border-primary/30 flex flex-col items-center justify-center text-primary/60 hover:text-primary hover:bg-accent/20 transition-all duration-300">
+<span class="material-symbols-outlined !text-[32px] mb-2">add_photo_alternate</span>
+<span class="text-xs font-semibold">Chưa có ảnh</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="w-full py-1 flex justify-center border-t border-[#d8dcdf] mt-auto bg-[#F5F4F0]">
+    <p class="text-[#67747e] text-xs flex items-center gap-1">
+        © 2026 Memory | Yahub | <a href="mailto:letrungthong063@gmail.com?subject=Liên hệ&body=Xin chào yahub">
+            Liên hệ
+        </a>
+    </p>
+</footer>
+</body></html>
