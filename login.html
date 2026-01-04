@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kỷ niệm lớp</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #F5F4F0;
+      font-family: Arial, sans-serif;
+    }
+    .login-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #516D85;
+      margin-bottom: 10px;
+    }
+    input {
+      padding: 10px;
+      width: 100%;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #516D85;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #E74C3C;
+    }
+    .error {
+      color: #E74C3C;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Kỷ niệm lớp</h1>
+    <p>Trang dành riêng cho thành viên lớp</p>
+    <input type="password" id="password" placeholder="Nhập mật khẩu" />
+    <button onclick="checkPassword()">Vào trang</button>
+    <p class="error" id="error"></p>
+  </div>
+
+  <script>
+    const PASSWORD = "123456"; // 🔑 đổi mật khẩu tại đây
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === PASSWORD) {
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").innerText = "Mật khẩu không đúng";
+      }
+    }
+  </script>
+
+</body>
+</html>
